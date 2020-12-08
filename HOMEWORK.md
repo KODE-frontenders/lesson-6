@@ -11,40 +11,38 @@
 7. Какой функционал у кнопки "Не пришло письмо" из подтверждения?
 8. На макетах везде одинаковое доменное имя. Маршрутизацию не придумывать?
 9. В макетах с подтверждения нужно делать инпуты или просто по нажатию на цифру, она должна появляться над полоской?
-10. Почему у SignIn нет заголовка.
-
+10. Почему в signup отступ до инпута в обычном состоянии меньше, чем когда есть алерт(всплывающая подсказка). Я думаю, лучше сделать всплывающую подсказку fixed.
 ### Разбивка UI на атомарные компонентики:
 
 #### Atoms
-1. Loaders(LoaderLoading, LoaderFailure, LoaderSuccess)
-2. Btn
-3. Input (Номер телефона или email)
-4. Checkbox
-5. confirm-DigitDiv
-6. confirm-DigitBtn
-7. confirm-DelBtn
+1. Loaders(LoaderLoading, LoaderFailure, LoaderSuccess) - 20 мин
+2. Btn - 5 мин
+3. Input (Номер телефона или email) - 20 мин
+4. Checkbox - 30 мин
+5. confirm-DigitDiv(цифра над полоской) - 7 мин
+6. confirm-DigitBtn - 30 мин
+7. confirm-DelBtn - 10 мин
 #### Moleculs
-1. signin-InputCorrect = input + label
-2. signin-InputIncorrect = input + 2labels
-3. Allert = icon + span
-4. signin-RegistrationLink = span + link
-5. signin-LoadingRequest = LoaderLoading + span
-6. signin-LoadingFailure = LoaderFailure + span
-7. signin-LoadingSuccess = LoaderSuccess + span
-8. signup-Agreements = Checkbox + p + span + btn
-9. signup-RegistrationInput = input + span
-10. signup-RegistrationInputWithPhone = span + input + span
-11. confirm-Blocks = 4 div
-12. confirm-DigitalsSms = 10DigitBtn + DelBtn + SmsBtn
-13. confirm-DigitalsPost = 10DigitBtn + DelBtn + PostBtn
+1. signin-InputCorrect = input + label 20 мин
+2. signin-InputIncorrect = input + 2labels 20 мин
+3. Allert = icon + span 30 мин
+4. signin-RegistrationLink = span + link 10 мин
+5. signin-LoadingRequest = LoaderLoading + span 9 мин
+6. signin-LoadingFailure = LoaderFailure + span 7 мин
+7. signin-LoadingSuccess = LoaderSuccess + span 7 мин
+8. signup-Agreements = Checkbox + p + span + btn 25 мин
+9. signup-RegistrationInput = input + 2span 15 мин
+11. confirm-Blocks = 4 DigitBtn 20 мин
 #### Organisms
-1. signin-SignInForm = input + btn
-2. signup-SignUpForm = RegistrationInput + Agreements
+1. signin-SignInForm = input + btn 30 мин
+2. signup-SignUpForm = RegistrationInput + Agreements 1 ч.
+3. confirm-DigitalsSms = 10DigitBtn + DelBtn + SmsBtn 2 ч.
+4. confirm-DigitalsPost = 10DigitBtn + DelBtn + PostBtn 15 мин
 #### Templates
-1. Header 
-2. Body
-3. confirm-SmsOrEmailBody(text1/text2 + Blocks + DigitalsSms/DigitalsPost)
+1. Header 20 мин
+2. Body 7 мин
+3. confirm-SmsOrEmailBody(text1/text2 + Blocks + DigitalsSms/DigitalsPost) 30 мин
 #### Pages
-1. SignIn
-2. SignUp
-3. Confirm
+1. SignIn 30 мин
+2. SignUp 45 мин
+3. ConfirmSms,ConfirmPost 1-2 ч
